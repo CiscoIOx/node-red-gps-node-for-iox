@@ -47,7 +47,6 @@ module.exports = {
 	configure_gps: function(callback) {
 		var oauth = require('./oauth.js');
 		var https = require('https');
-		// var querystring = require('querystring'); 
 		var nbi_label = "nbi";
 		var nbi_host = process.env[nbi_label+"_IP_ADDRESS"];
 		var nbi_port = process.env[nbi_label+"_TCP_9999_PORT"];
@@ -55,7 +54,6 @@ module.exports = {
 		var fs = require('fs');
 		var fileName = "GPS_Config.json";
 		var payload = fs.readFileSync("/usr/src/node-red/gpsapp/"+fileName);
-		// console.log(`payload: ${payload}`);
 		var jsonData = JSON.parse(payload);
 		console.log('jsonData of config:');
 		console.log(jsonData);

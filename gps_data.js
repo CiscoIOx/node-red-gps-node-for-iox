@@ -1,24 +1,4 @@
 module.exports = {
-	// web_socket_gps_data: function(callback) {
-	// 	var oauth = require('./oauth.js');
-	// 	var https = require('https');
-	// 	var nbi_label = "nbi";
-	// 	var nbi_host = process.env[nbi_label+"_IP_ADDRESS"];
-	// 	var nbi_port = process.env[nbi_label+"_TCP_9999_PORT"];
-	// 	var ws = new Websocket('wss://' + nbi_host + ':' + nbi_port + '/api/v1/mw/topics/gps');
-	// 	ws.onopen = function() {
-	// 		console.log('================Successfully connect WebSocket');
-	// 	}
-	// 	ws.onmessage = function(message) {
-	// 		console.log('Receive message: ' + message.data);
-	// 		try {
-	// 			callback(JSON.parse(message.data));
-	// 		} catch (e) {
-	// 			console.error(e);
-	// 		}
-	// 	}
-	// },
-
 	get_gps_data: function(callback) {
 		var oauth = require('./oauth.js');
 		var https = require('https');
