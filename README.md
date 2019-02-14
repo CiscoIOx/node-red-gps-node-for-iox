@@ -15,14 +15,14 @@ This repo contains code for Cisco IOx gps node module of Node-RED. The gps node 
 
 #### If you have the `package.tar` of this app, start from Step 3.
 
-#### 0. Build Node-RED slim Docker image
+### 0. Build Node-RED slim Docker image
 
 (If you already have Docker image `node0:1.0`, you can skip this step.)
 
 Build Docker image `node0:1.0` using the following package:
 https://github.com/CiscoIOx/node-red-slim-for-iox
 
-#### 1. Build gps node Docker image
+### 1. Build gps node Docker image
 
 Go to the root of this package (same path as Dockerfile) and run:
 `docker build -t gpsnode:1.0 .`
@@ -30,7 +30,7 @@ Go to the root of this package (same path as Dockerfile) and run:
 Don't forget the `.` at the end. It means the current directory.
 This will create a Docker image `gpsnode:1.0` based on the previously built image `node0:1.0`.
 
-#### 2. Create IOx application package
+### 2. Create IOx application package
 
 Use the following command to build the IOx application package named **package.tar**.
 
@@ -38,7 +38,7 @@ Use the following command to build the IOx application package named **package.t
 
 Don't forget the `.` at the end.
 
-#### 3. Deploy, activate and start the app
+### 3. Deploy, activate and start the app
 
 Deploy the application onto IR800 using Local Manager or ioxclient.
 
